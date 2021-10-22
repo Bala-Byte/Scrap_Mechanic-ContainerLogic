@@ -1,0 +1,12 @@
+{
+     "b5fa8830-e2b7-4a62-aaab-636b2a45d2ac":
+     {
+          "title": "Container measurer (Sticked)",
+		"description": "Stick it onto one of the outputs of a container\n\n ON signal if the container is full"
+     },
+     "8be94c4e-86dc-4241-b7f3-5be6bd876188":
+     {
+          "title": "Container Measurer (Remote)",
+		"description": "Wire to the container\n\nON signal if the container is full\n!Incompatible with Large Chest!"
+     }
+}

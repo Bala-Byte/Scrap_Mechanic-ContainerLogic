@@ -1,0 +1,149 @@
+{
+	"partList": [
+		{
+			"uuid": "8be94c4e-86dc-4241-b7f3-5be6bd876188",
+			"name": "obj_remote_container_measure",
+			"renderable": {
+				"lodList": [
+					{
+						"subMeshList": [
+							{
+								"textureList": [
+									"$GAME_DATA/Objects/Textures/interactive/obj_interactive_logicgate_dif.tga",
+									"$GAME_DATA/Objects/Textures/interactive/obj_interactive_logicgate_asg.tga",
+									"$GAME_DATA/Objects/Textures/interactive/obj_interactive_logicgate_nor.tga",
+									"$GAME_DATA/Objects/Textures/interactive/obj_interactive_logicgate_ao.tga"
+								],
+								"material": "PoseAnimDifAsgNorAo"
+							},
+							{
+								"textureList": [
+									"$MOD_DATA/Objects/Textures/obj_wired_container_measure_on_dif.tga",
+									"$MOD_DATA/Objects/Textures/obj_wired_container_measure_on_asg.tga",
+									"$MOD_DATA/Objects/Textures/obj_wired_container_measure_on_nor.tga",
+									"$MOD_DATA/Objects/Textures/obj_wired_container_measure_on_ao.tga"
+								],
+								"material": "UVAnimDifAsgNorAo",
+								"custom": {
+									"uv0": {
+										"u": 0.16666667,
+										"v": 0.1645
+									}
+								}
+							}
+						],
+						"mesh": "$GAME_DATA/Objects/Mesh/interactive/obj_interactive_logicgate_off.fbx",
+						"pose0": "$GAME_DATA/Objects/Mesh/interactive/obj_interactive_logicgate_on.fbx"
+					}
+				]
+			},
+			"rotationSet": "PropYZ",
+			"color": "03821e",
+			"box": {
+				"x": 1,
+				"y": 1,
+				"z": 1
+			},
+			"physicsMaterial": "Mechanical",
+			"scripted": {
+				"filename": "$MOD_DATA/Scripts/containerMeasure_Remote.lua",
+				"classname": "RemoteContainerMeasure"
+			},
+			"ratings": {
+				"density": 2,
+				"durability": 3,
+				"friction": 5,
+				"buoyancy": 2
+			},
+			"sticky": "+Y-Y-Z+X-X",
+			"flammable": false,
+			"stackSize": 10
+		},
+		{
+			"uuid": "b5fa8830-e2b7-4a62-aaab-636b2a45d2ac",
+			"name": "obj_attached_container_measure",
+			"renderable": {
+				"lodList": [
+					{
+						"subMeshMap": {
+							"attachedcontainermeasure": {
+								"material": "DifAsgNor",
+								"textureList": [
+									"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_gas_dif.tga",
+									"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_gas_asg.tga",
+									"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_gas_nor.tga"
+								]
+							},
+							"body": {
+								"material": "DifAsgNor",
+								"textureList": [
+									//blk_scrapmetal
+									//blk_woodplanks01
+									//blk_spaceship01 - 03
+									"$SURVIVAL_DATA/Objects/Textures/blocks/blk_spaceship03_dif.tga",
+									"$SURVIVAL_DATA/Objects/Textures/blocks/blk_spaceship03_asg.tga",
+									"$SURVIVAL_DATA/Objects/Textures/blocks/blk_spaceship03_nor.tga"
+								]
+							},
+							"connectionpoint": {
+								"material": "DifAsgNor",
+								"textureList": [
+									"$SURVIVAL_DATA/Objects/Textures/containers/obj_interactive_container_connectorpoint_dif.tga",
+									"$SURVIVAL_DATA/Objects/Textures/containers/obj_interactive_container_connectorpoint_asg.tga",
+									"$SURVIVAL_DATA/Objects/Textures/containers/obj_interactive_container_connectorpoint_nor.tga"
+								]
+							},
+							"screen": {
+								"material": "UVAnimDifAsgNor",
+								"textureList": [
+									"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_screen_dif.tga",
+									"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_screen_asg.tga",
+									"$SURVIVAL_DATA/Objects/Textures/containers/obj_containers_screen_nor.tga"
+								],
+								"custom": {
+									"uv0": {
+										"v": 0.167,
+										"u": 1
+									}
+								}
+							}
+						},
+						"mesh": "$MOD_DATA/Objects/Mesh/obj_attached_container_measure.fbx"
+						// Adding more pose will make it have a block mesh
+						/*"pose0": "$SURVIVAL_DATA/Objects/Mesh/containers/obj_containers_gas_pose0.fbx",
+						"pose1": "$SURVIVAL_DATA/Objects/Mesh/containers/obj_containers_gas_pose1.fbx"*/
+					}
+				]
+			},
+			"color": "4c9938",
+			"box": {
+				"x": 1,
+				"y": 3,
+				"z": 3
+			},
+			"scripted": {
+				"filename": "$MOD_DATA/Scripts/containerMeasure_Sticky.lua",
+				"classname": "stickyContainerMeasure"
+			},
+			"rotationSet": "PropYZ",
+			"physicsMaterial": "Mechanical",
+			"ratings": {
+				"density": 5,
+				"durability": 6,
+				"friction": 4,
+				"buoyancy": 6
+			},
+			"flammable": false,
+			"pipe": {
+				"openings": [
+					{
+						"side": "-X",
+						"x": -0.5,
+						"y": 0,
+						"z": 0
+					}
+				]
+			}
+		}
+	]
+}
